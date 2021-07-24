@@ -1,0 +1,21 @@
+{
+    "install": "pip3 install --user -r requirements.txt",
+    "start": "python3 web.py",
+    "watch": {
+        "ignore": [
+            "__pycache__/**/*"
+        ],
+        "install": {
+            "include": [
+                "^requirements\\.txt$",
+                "^\\.env$"
+            ]
+        },
+        "restart": {
+            "include": [
+                "^\\.py$"
+            ]
+        },
+        "throttle": 5000
+    }
+}
